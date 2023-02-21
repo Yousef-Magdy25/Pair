@@ -1,0 +1,228 @@
+/*start variables*/
+:root{
+    --main-color:#ececec ;
+    --main-color-alt:#fafafa;
+    --secondary-color:#d50032;
+    --secondary-color-alt:#c81f46;
+    --third-color:#5e5e5e;
+}
+/*end variables*/
+/*start small screens*/
+    @media (max-width:768px){
+        /*start scroll to top*/
+            body >i{
+                right: 10px;
+            }
+        /*end scroll to top*/
+        /*start viewProduct*/
+        .market .view-product .container{
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+        }
+        .market .view-product .container .image img{
+            width: 90%;
+            height: 250px;
+        }
+        .market .view-product .container .image .sizes{
+            margin-top: 15px;
+        }
+        .market .view-product .container .info .button{
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        /*end viewProduct*/
+        /*start footer*/
+            .footer .container{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        /*end footer*/
+    }
+/*end small screens*/
+/*start medium screen or lower*/
+    @media (max-width:992px){
+        /*start header*/
+        .header{
+            height: 92px;
+            background-color: var(--main-color);
+            box-shadow: 0 0.1px 2px rgb(0 0 0 );
+        }
+        .header .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 2fr 1fr;
+            grid-template-rows: 100px;
+            grid-gap: 25px;
+        }
+        .header .container .logo{
+            order: 3;
+            color: var(--secondary-color);
+        }
+        .header .container .logo h1:hover{
+            cursor: pointer;
+        }
+        .header .container .search{
+            order: 2;
+            transform: translateY(30px);
+            position: relative;
+        }
+        .header .container .search i:first-of-type{
+            display: none;
+        }
+        .header .container .search i{
+            font-size: 1.5rem;
+            color: var(--third-color);
+            display: block;
+        }
+        .header .container .search i:hover{
+            color: var(--secondary-color-alt);
+            cursor: pointer;
+        }
+        .header .container .search input{
+            width: 200px;
+            height: 30px;
+            outline: none;
+            border-radius: 20px;
+            padding-left: 10px;
+            position: absolute;
+            top: 30px;
+            display: none;
+        }
+        .header .container .menu-bar{
+            order: 1;
+            transform: translateY(30px);
+            position: relative;
+        }
+        .header .container .menu-bar i:first-of-type{
+            display: none;
+        }
+        .header .container .menu-bar i{
+            font-size: 1.5rem;
+            color:var(--third-color);
+            display: block;
+        }
+        .header .container .menu-bar i:hover{
+            color: var(--secondary-color-alt);
+            cursor: pointer;
+        }
+        .header .container .menu-bar ul{
+            flex-direction: column;
+            justify-content:space-around;
+            list-style: none;
+            position: absolute;
+            top: 48px;
+            left: 50%;
+            transform: translateX(-4%);
+            background-color: var(--main-color);
+            padding: 0;
+            width: 300px;
+            height: calc(100vh - 300px);
+            text-align: center;
+            display: none;
+        }
+        .header .container .menu-bar ul a{
+            color: black;
+        }
+        .header .container .menu-bar ul li{
+            font-size: 1.24rem;
+            padding: 30px 30px 30px 10px;
+            transition: 0.5s;
+        }
+        .header .container .menu-bar ul li:hover{
+            cursor: pointer;
+            background-color: var(--main-color-alt);
+            color: var(--secondary-color-alt);
+        }
+        .header .container .cart{
+            order: 4;
+            transform: translateY(30px) translateX(10px);
+        }
+        .header .container .cart i{
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            transform: translateX(-15px);
+        }
+        .header .container .cart i:hover{
+            cursor: pointer;
+        }
+        .header .container .cart i:last-of-type{
+            display: none;
+        }
+    /*end header*/
+    /*start landing*/
+    .landing{
+        margin-top: 30px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: relative;
+    }
+    .landing .container{
+        width: 100%;
+        height: 100%;
+    }
+    .landing .container .image-container{
+        width: 100%;
+        height: 100%;
+    }
+    .landing .container .image{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    .landing .container img{
+        width: 100%;
+        height: calc(100% - 200px);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.4s;
+    }
+    .landing .container img:first-of-type{
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+    .landing .container img:nth-of-type(2){
+        position: absolute;
+        top: 0;
+        left:150%;
+    }
+    .landing .container img:last-of-type{
+        position: absolute;
+        top: 0;
+        left: 250%;
+    }
+    .landing .go-down {
+        color: var(--secondary-color);
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        margin-top: 50px
+    }
+    .landing .go-down p{
+        color: var(--secondary-color);
+        font-size: 1.8rem;
+        font-family: 'Itim', cursive;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px
+    }
+    .landing .go-down i{
+        color: var(--secondary-color);
+        font-size: 1.8rem;
+        animation: bouncing 1.5s infinite;
+    }
+/*end landing*/
+    }
+/*end medium screen or lower*/
+/*start large screen or lower*/
+    @media (max-width:1200px){
+        
+    }
+/*end large screen or lower*/

@@ -704,7 +704,7 @@ for (i = 0; i < prod.length; i++) {
     if (screen.width >= 768 && screen.height >= 780) {
       viewInfo.style.height = "55vh";
     } else if (screen.height >= 780) {
-      viewInfo.style.height = "90vh";
+      viewInfo.style.height = "105vh";
     } else {
       viewInfo.style.height = "105vh";
     }
@@ -754,7 +754,6 @@ cartButton.addEventListener("click", function (e) {
     mainCart.style.display = "flex";
     mainCart.style.flexBasis = "100%";
     mainCart.style.width = "100%";
-    mainCart.style.height="100%"
     let mainProducts = document.querySelector(".market .container .products");
     mainProducts.style.flexBasis = "0%";
     mainProducts.style.display = "none";

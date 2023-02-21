@@ -754,6 +754,7 @@ cartButton.addEventListener("click", function (e) {
     mainCart.style.display = "flex";
     mainCart.style.flexBasis = "100%";
     mainCart.style.width = "100%";
+    mainCart.style.height="100%"
     let mainProducts = document.querySelector(".market .container .products");
     mainProducts.style.flexBasis = "0%";
     mainProducts.style.display = "none";
